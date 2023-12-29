@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0; 
+    list-style: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4285fe;
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    max-width: 500px;
+    height: 80vh;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 0 50px;
+}
+.container h2{
+    font-size: 1.34rem;
+    font-weight: 700;
+    padding: 1rem 1.7rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+.wrapper{
+    margin: 1.7rem 1.2rem;
+    position: relative;
+}
+.input-box{
+    display: flex;
+}
+
+span i{
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    margin: 0 0 20px;
+    color: #707070;
+    cursor: pointer;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0 2.85rem 0 1rem;
+    border: 1px solid #aaa;
+    outline: none;
+    letter-spacing: 1.4px;
+    background: none;
+    color: #333;
+}
+.wrapper .pass-indicator{
+    background: #dfdfdf;
+    width: 100%;    
+    position: relative;
+    height: 5px;
+    margin-top: 0.69rem;
+    border-radius: 8px;
+}
+.wrapper .pass-indicator::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background-color: gold;
+    transition: width 0.5s ease;
+}
+
+.wrapper .pass-indicator#weak::before{
+    width: 20%;
+    background: #e64aaa;
+}
+.wrapper .pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c804;
+}
+.wrapper .pass-indicator#strong::before{
+    width: 100%;
+    background: #4285fe;
+}
+
+.wrapper .pass-length{
+    margin: 1.55rem 0 1.25rem;
+}
+.pass-length .details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.pass-length input{
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+}
+.pass-settings .options{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.pass-settings .options .option{
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    width: calc(100% / 2);
+}
+.options .option input{
+    height: 17px;
+    width: 17px;
+    cursor: pointer;
+}
+.options .option:first-child{
+    pointer-events: none;
+}
+.options .option:first-child input{
+    opacity: 0.7;
+}
+.options .option label{
+    cursor: pointer;
+    margin-left: 0.7rem;
+}
+.btn{
+    width: 400px;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: #4285fe;
+    color: #fff;
+    text-transform: uppercase;
+}
+.btn:hover{
+    letter-spacing: 1px;
+}
